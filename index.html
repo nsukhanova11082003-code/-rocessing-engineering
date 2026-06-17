@@ -1,203 +1,138 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Processing Engineering</title>
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-body{
-font-family:Arial, Helvetica, sans-serif;
-background:#0d1117;
-color:white;
-line-height:1.6;
-}
-.hero{
-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding:20px;
-background:
-linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.75)),
-url("https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?auto=format&fit=crop&w=1600&q=80");
-background-size:cover;
-background-position:center;
-}
-.hero h1{
-font-size:64px;
-margin-bottom:20px;
-letter-spacing:3px;
-}
-.hero p{
-font-size:22px;
-max-width:800px;
-color:#c9d1d9;
-}
-.btn{
-margin-top:30px;
-display:inline-block;
-padding:15px 35px;
-background:#238636;
-color:white;
-text-decoration:none;
-border-radius:8px;
-font-weight:bold;
-transition:0.3s;
-}
-.btn:hover{
-background:#2ea043;
-}
-.container{
-max-width:1200px;
-margin:auto;
-padding:80px 20px;
-}
-.section-title{
-text-align:center;
-font-size:42px;
-margin-bottom:50px;
-}
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-}
-.card{
-background:#161b22;
-padding:30px;
-border-radius:15px;
-border:1px solid #30363d;
-transition:0.3s;
-}
-.card:hover{
-transform:translateY(-5px);
-}
-.card h3{
-margin-bottom:15px;
-color:#58a6ff;
-}
-.advantages{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:20px;
-}
-.adv{
-background:#161b22;
-padding:25px;
-border-radius:15px;
-}
-footer{
-background:#161b22;
-text-align:center;
-padding:40px 20px;
-margin-top:60px;
-}
-.contact{
-font-size:18px;
-margin:10px 0;
-}
-max-width:768px{
-.hero h1{
-font-size:42px;
-}
-.hero p{
-font-size:18px;
-}
-.section-title{
-font-size:32px;
-}
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Processing Engineering</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #0d1117;
+            color: white;
+            line-height: 1.6;
+        }
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            background:
+                linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url('сайт/фон.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .hero h1 {
+            font-size: 64px;
+            margin-bottom: 20px;
+            letter-spacing: 3px;
+        }
+        .hero p {
+            font-size: 22px;
+            max-width: 800px;
+            color: #c9d1d9;
+        }
+        .btn {
+            margin-top: 30px;
+            display: inline-block;
+            padding: 15px 35px;
+            background: #238636;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            background: #2ea043;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 80px 20px;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 42px;
+            margin-bottom: 50px;
+        }
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+        .card {
+            background: #161b22;
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid #30363d;
+            transition: 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card h3 {
+            margin-bottom: 15px;
+            color: #58a6ff;
+        }
+        .advantages {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .adv {
+            background: #161b22;
+            padding: 25px;
+            border-radius: 15px;
+        }
+        footer {
+            background: #161b22;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 60px;
+        }
+        .contact {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        max-width: 768px {
+            .hero h1 {
+                font-size: 42px;
+            }
+            .hero p {
+                font-size: 18px;
+            }
+            .section-title {
+                font-size: 32px;
+            }
+        }
+    </style>
 </head>
 <body>
-<section class="hero">
-<h1>PROCESSING ENGINEERING</h1>
-<p style="margin-top:15px;font-size:18px;color:#8b949e;letter-spacing:2px;">
-BY VLADISLAV KALININ
-</p>
-<p>
-Разработка управляющих программ и технологических процессов
-для высокоточной механической обработки сложных деталей
-на станках с ЧПУ.
-</p>
-<a href="#contacts" class="btn">
-Получить консультацию
-</a>
-</section>
-<section class="container">
-<h2 class="section-title">
-Наши услуги
-</h2>
-<div class="cards">
-<div class="card">
-<h3>Фрезерные УП</h3>
-<p>
-Разработка управляющих программ для 3-, 4- и 5-осевой обработки.
-</p>
-</div>
-<div class="card">
-<h3>Токарные УП</h3>
-<p>
-Разработка программ для токарных и токарно-фрезерных центров.
-</p>
-</div>
-<div class="card">
-<h3>Технологические процессы</h3>
-<p>
-Подготовка технологической документации и маршрутов обработки.
-</p>
-</div>
-<div class="card">
-<h3>Оптимизация производства</h3>
-<p>
-Сокращение времени цикла и повышение эффективности обработки.
-</p>
-</div>
-</div>
-</section>
-<section class="container">
-<h2 class="section-title">
-Почему выбирают нас
-</h2>
-<div class="advantages">
-<div class="adv">
-✓ Сложные детали высокой точности
-</div>
-<div class="adv">
-✓ Поддержка многоосевой обработки
-</div>
-<div class="adv">
-✓ Подбор режущего инструмента
-</div>
-<div class="adv">
-✓ Минимизация времени наладки
-</div>
-<div class="adv">
-✓ Индивидуальный подход к каждому проекту
-</div>
-<div class="adv">
-✓ Современные CAM-технологии
-</div>
-</div>
-</section>
-<footer id="contacts">
-<h2>Контакты</h2>
-<p class="contact">
-Email: yourmail@example.com
-</p>
-<p class="contact">
-Telegram: @yourtelegram
-</p>
-<p class="contact">
-Processing Engineering © 2026
-</p>
-</footer>
-</body>
-</html>
+    <section class="hero">
+        <h1>PROCESSING ENGINEERING</h1>
+        <p>Разработка управляющих программ и технологических процессов для высокоточной обработки деталей на станках с ЧПУ.</p>
+        <a href="#contacts" class="btn">Получить консультацию</a>
+    </section>
+
+    <section class="container">
+        <h2 class="section-title">Наши услуги</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>Фрезерные УП</h3>
+                <p>Разработка управляющих программ для 3-, 4- и 5-осевой обработки.</p>
+            </div>
+            <div class="card">
+                <h3>Токарные УП</h3>
+                <p>Разработка программ для токарных и токарно-фрезерных станков.</p>
+            </div>
+            <div class="card">
+                <
